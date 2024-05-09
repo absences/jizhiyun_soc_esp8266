@@ -47,8 +47,8 @@ unsigned int default_private_key_len = 0;
  */
 #define GPIO_KEY_NUM 1                      ///< Defines the total number of key members
 #define KEY_0_IO_MUX PERIPHS_IO_MUX_GPIO0_U ///< ESP8266 GPIO function
-#define KEY_0_IO_NUM 4                      ///< ESP8266 GPIO number
-#define KEY_0_IO_FUNC FUNC_GPIO0            ///< ESP8266 GPIO name
+#define KEY_0_IO_NUM 2                      ///< ESP8266 GPIO number
+#define KEY_0_IO_FUNC FUNC_GPIO2            ///< ESP8266 GPIO name gpio2按下  io0输出
 
 LOCAL key_typedef_t *singleKey[GPIO_KEY_NUM]; ///< Defines a single key member array pointer
 LOCAL keys_typedef_t keys;                    ///< Defines the overall key module structure pointer
