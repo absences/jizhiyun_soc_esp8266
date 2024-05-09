@@ -46,7 +46,7 @@ unsigned int default_private_key_len = 0;
  * @{
  */
 #define GPIO_KEY_NUM 1                      ///< Defines the total number of key members
-#define KEY_0_IO_MUX PERIPHS_IO_MUX_GPIO0_U ///< ESP8266 GPIO function
+#define KEY_0_IO_MUX PERIPHS_IO_MUX_GPIO2_U ///< ESP8266 GPIO function
 #define KEY_0_IO_NUM 2                      ///< ESP8266 GPIO number
 #define KEY_0_IO_FUNC FUNC_GPIO2            ///< ESP8266 GPIO name gpio2按下  io0输出
 
@@ -61,7 +61,7 @@ LOCAL keys_typedef_t keys;                    ///< Defines the overall key modul
  */
 LOCAL void ICACHE_FLASH_ATTR key1ShortPress(void)
 {
-    GIZWITS_LOG("#### key2 short press, soft ap mode \n");
+    GIZWITS_LOG("#### key1 short press, soft ap mode \n");
 
     gizwitsSetMode(WIFI_SOFTAP_MODE);
 }
@@ -73,7 +73,7 @@ LOCAL void ICACHE_FLASH_ATTR key1ShortPress(void)
  */
 LOCAL void ICACHE_FLASH_ATTR key1LongPress(void)
 {
-    GIZWITS_LOG("#### key2 long press, airlink mode\n");
+    GIZWITS_LOG("#### key1 long press, airlink mode\n");
 
     gizwitsSetMode(WIFI_AIRLINK_MODE);
 }
