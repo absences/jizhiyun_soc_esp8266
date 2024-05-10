@@ -9,13 +9,17 @@ Gizwits myGizwits;
 
 const int DHT11PIN = 8;  //dht输入
 
+const int buttonPIN = 7;  //开关
+
 dht11 DHT11;
 
+bool varR_Button = 0;
 
 void setup() {
   // put your setup code here, to run once:
 
   Serial.begin(9600);
+  pinMode(buttonPIN, OUTPUT);
 
   myGizwits.begin();
 }
@@ -41,11 +45,16 @@ void loop() {
   }
 
 
-  bool varR_Button = 0;
+
   if (myGizwits.hasBeenSet(EVENT_Button)) {
     myGizwits.read(EVENT_Button, &varR_Button);  //Address for storing data
   }
 
+  if (varR_Button == 1) {
+    digitalWrite(buttonPIN, HIGH);  // 打开 
+  } else {
+    digitalWrite(buttonPIN, LOW);  // 关闭 
+  }
 
   myGizwits.process();
 }

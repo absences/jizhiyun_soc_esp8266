@@ -153,7 +153,7 @@ void setup() {
   pinMode(KEY2, INPUT_PULLUP);
 
   myGizwits.begin();
-
+  Serial.println("GoKit init  OK \n");
   //mySerial.println("GoKit init  OK \n");
 }
 
