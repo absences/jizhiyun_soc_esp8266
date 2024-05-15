@@ -1,0 +1,9 @@
+$HOME/.env/myhome/bin/python -m pip install --upgrade pip
+$HOME/.env/myhome/bin/python -m pip install pygame
+
+
+source $HOME/.env/myhome/bin/activate
+$HOME/.env/myhome/bin/python blinkerHome.py
+
+
+$HOME/.env/myhome/bin/python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 
